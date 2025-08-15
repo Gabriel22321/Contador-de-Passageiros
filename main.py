@@ -19,6 +19,9 @@ with open('out.csv', 'r') as arquivo:
             buss_list.append({"line": str_arr[0], "pass": soma})
             
 # Ordena a lista de dicionários pelo campo "pass".
+# - sorted(buss_list, ...): cria e retorna uma NOVA lista ordenada (não altera a original).
+# - key=lambda x: x["pass"]: para cada item (x) da lista, usa x["pass"] como chave de comparação.
+# - reverse=True: ordena em ordem decrescente (do maior para o menor) ou false para ordem crescente.
 buss_list = sorted(buss_list, key=lambda x: x["pass"], reverse=True) 
 
 print(buss_list)
